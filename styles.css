@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+    padding: 0 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.advice {
+    background: linear-gradient(45deg, #f7f7f7, #ffffff);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#adviceText {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.2rem;
+    border: none;
+    color: #fff;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button i {
+    font-size: 1.6rem;
+    margin-right: 10px;
+}
+
+#generateBtn {
+    background-color: #007bff;
+}
+
+#likeBtn {
+    background-color: #28a745;
+}
+
+#dislikeBtn {
+    background-color: #dc3545;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.counts {
+    margin-top: 30px;
+}
+
+.counts span {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+    margin-left: 10px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .advice {
+        padding: 20px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #adviceText {
+        font-size: 1.5rem;
+    }
+}
